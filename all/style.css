@@ -4,6 +4,7 @@ html{
     width: 100%;
     overflow-y: scroll;
     
+    
 }
 
 body {
@@ -32,6 +33,8 @@ table td, table th {
 .results td {
     text-align: center;
 }
+
+
 
 tr.hit-no {
     background-color: indianred;
@@ -65,6 +68,13 @@ tr.hit-yes {
 
 #result-table{
     height: 400 px;
+    overflow-y: scroll;
+}
+
+#result_table_container{
+    overflow-y: auto;
+    max-height: 280px;
+    max-width: 2800px;
 }
 
 /* Стили для селектора атрибутов */
