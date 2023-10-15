@@ -1,0 +1,13 @@
+{
+    "php.validate.executablePath": "D:\\dwnlds\\UwAmp\\UwAmp\\bin\\php\\php-7.0.3\\php.exe",
+    "php.executablePath": "D:\\dwnlds\\UwAmp\\UwAmp\\bin\\php\\php-7.0.3\\php.exe",
+    "git.autofetch": true,
+    "workbench.editorAssociations": {
+        "*.o": "default"
+    },
+    "redhat.telemetry.enabled": true,
+    "git.confirmSync": false,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "search.useIgnoreFiles": false 
+}
+ 

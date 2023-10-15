@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" type="image" href="/all/image/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <!--    connection to css-->
+    <title>1st web-programming lab</title>
+</head>
+
+<body>
+
+    <table id="main-table" border="1" cellpadding="0" cellspacing="0" width="100%">
+        <tr class="hat">
+            <th colspan=2>Tolstykh M.A.<br>P3230<br> Var: 1116</th>
+        </tr>
+
+        <th>Result</th>
+        <th>Coordinates</th>
+
+
+
+        <tr>
+            <td width="25%">
+                <div id="result_table_container">
+                    <table id="result-table" border="1" cellpadding="0" cellspacing="0" width="100%" class="results">
+                        <tr class="table-header">
+                            <th class="coords-col">X</th>
+                            <th class="coords-col">Y</th>
+                            <th class="coords-col">R</th>
+                            <th class="time-col">Request time</th>
+                            <th class="time-col">Execution time</th>
+                            <th class="hitres-col">Hit</th>
+                        </tr>
+                    </table>
+                </div>
+
+            </td>
+            <td width="80%">
+                <table>
+                    <td width="50%">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="350" height="350">
+                            <!-- axis -->
+                            <line stroke="black" x1="0" y1="175" x2="350" y2="175" />
+                            <line stroke="black" x1="175" y1="0" x2="175" y2="350" />
+                            <!-- axis arrows -->
+                            <polygon points="175,0 170,15 180,15" stroke="black"></polygon>
+                            <polygon points="350,175 335,170 335,180" stroke="black"></polygon>
+                            <!-- axis values -->
+                            <text x="335" y="165" font-size="25">x</text>
+                            <text x="185" y="15" font-size="25">y</text>
+                            <!-- x-axis labels -->
+                            <line stroke="black" x1="40" y1="170" x2="40" y2="180" />
+                            <line stroke="black" x1="110" y1="170" x2="110" y2="180" />
+                            <line stroke="black" x1="240" y1="170" x2="240" y2="180" />
+                            <line stroke="black" x1="310" y1="170" x2="310" y2="180" />
+                            <!-- y-axis labels -->
+                            <line stroke="black" x1="170" y1="40" x2="180" y2="40" />
+                            <line stroke="black" x1="170" y1="110" x2="180" y2="110" />
+                            <line stroke="black" x1="170" y1="240" x2="180" y2="240" />
+                            <line stroke="black" x1="170" y1="310" x2="180" y2="310" />
+                            <!-- names of x-axis labels -->
+                            <text x="35" y="160" font-size="20">-R</text>
+                            <text x="90" y="160" font-size="20">-R/2</text>
+                            <text x="225" y="160" font-size="20">R/2</text>
+                            <text x="305" y="160" font-size="20">R</text>
+                            <!-- names of y-axis labels -->
+                            <text x="185" y="45" font-size="20">R</text>
+                            <text x="185" y="115" font-size="20">R/2</text>
+                            <text x="185" y="245" font-size="20">-R/2</text>
+                            <text x="185" y="315" font-size="20">-R</text>
+                            <!-- area in 1st coordinate quarter -->
+                            <g transform="translate(175,175)" stroke="#000" stroke-width="2">
+                                <path d="M0 0-0-135A135 135 0 0 1 135-0Z" fill="aquamarine" fill-opacity="0.6" />
+                            </g>
+                            <!-- area in 4th coordinate quarter -->
+                            <rect x="175" y="175" width="65" height="135" fill="mediumseagreen" fill-opacity="0.6"
+                                stroke="#000" stroke-width="2" />
+
+                            <!-- area in 3th coordinate quarter -->
+                            <polygon points="40 175 175 175 175 310" fill="mediumaquamarine" fill-opacity="0.6"
+                                stroke="#000" stroke-width="2"></polygon>
+                        </svg>
+                    </td>
+
+
+                    <td width="20%" valign="top">
+                        <div class="param x">
+                            <label for="x">X:</label><br>
+                            <input type="radio" id="number" name="number" value="-5"> -5<br>
+                            <input type="radio" id="number" name="number" value="-4">
+                            -4<br>
+                            <input type="radio" id="number" name="number" value="-3"> -3<br>
+                            <input type="radio" id="number" name="number" value="-2">
+                            -2<br>
+                            <input type="radio" id="number" name="number" value="-1" checked>
+                            -1<br>
+                            <input type="radio" id="number" name="number" value="0"> 0<br>
+                            <input type="radio" id="number" name="number" value="1"> 1<br>
+                            <input type="radio" id="number" name="number" value="2"> 2<br>
+                            <input type="radio" id="number" name="number" value="3"> 3<br>
+
+                        </div>
+
+                        <div class="param y">
+                            <label for="y-input">Y: </label>
+                            <input id="y-input" autocomplete="off" maxlength="5" type="text" name="y_val" class="y" size="19" placeholder="From -5 to 5.">
+                        </div>
+
+                        <div class="param r">
+                            <label for="r">R: </label>
+                            <input class="r-button" type="button" value=1 onclick="chooseR(this)">
+                            <input class="r-button" type="button" value=1.5 onclick="chooseR(this)">
+                            <input class="r-button" type="button" value=2 onclick="chooseR(this)">
+                            <input class="r-button" type="button" value=2.5 onclick="chooseR(this)">
+                            <input class="r-button" type="button" value=3 onclick="chooseR(this)">
+
+                        </div>
+
+                        <input id="checkBtn" class="submit-btn" type="submit" onclick="submit()" value="Check">
+                        <input id="clearBtn" class="clear-btn" type="submit" onclick="clearTable()" value="Clear">
+                        <ul id="errors"></ul>
+                </table>
+
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                <script src="main.js"></script>
+</body>
+
+</html>
